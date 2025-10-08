@@ -10,8 +10,7 @@ public class NetworkHandler {
     private static int ID = 0;
 
     public static void registerMessages(){
-        INSTANCE = NetworkRegistry.newSimpleChannel(new Identifier(BetterCombat.MODID, "network"), () -> "1.0", s -> true, s -> true);
-
+        INSTANCE = NetworkRegistry.newSimpleChannel(Identifier.of(BetterCombat.MODID, "network"), () -> "1.0", s -> true, s -> true);
         INSTANCE.registerMessage(ID++, PacketWrapper.class, PacketWrapper::encode, PacketWrapper::decode, PacketWrapper::handle);
     }
 }
