@@ -1,20 +1,26 @@
+/*
+ * Better Combat Mod
+ * Copyright (C) 2024 The Better Combat Team
+ * License: GNU General Public License v3.0 or later
+ */
+
 package net.bettercombat.compatibility;
 
 import java.util.function.Supplier;
 
 import net.bettercombat.Platform;
 
-public class CompatibilityFlags {   
+public class CompatibilityFlags {
 
 
     public static boolean firstPersonRender() {
-        return false;
+        return firstPersonRenderSupplier.get();
     }
-    public static Supplier<Boolean> firstPersonRender = () -> { return false; };
+    private static Supplier<Boolean> firstPersonRenderSupplier = () -> false;
     public static boolean usePehkui = false;
 
     public static void initialize() {
-        firstPersonRender = FirstPersonModelHelper.isDisabled();
+        firstPersonRenderSupplier = FirstPersonModelHelper.isDisabled();
         if (Platform.isModLoaded("pehkui")) {
             usePehkui = true;
             PehkuiHelper.load();

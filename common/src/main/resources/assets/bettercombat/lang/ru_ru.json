@@ -19,6 +19,8 @@
   "text.autoconfig.bettercombat.option.client.isHighlightCrosshairEnabled.@Tooltip": "Подсвечивает прицел, если враг достаточно близок для атаки.\nВНИМАНИЕ! Включение данной опции может существенно понизить производительность.",
   "text.autoconfig.bettercombat.option.client.hudHighlightColor": "Цвет подсвечивания",
   "text.autoconfig.bettercombat.option.client.hudHighlightColor.@Tooltip": "При необходимости к элементам пользовательского интерфейса \nприменяется цвет.",
+  "text.autoconfig.bettercombat.option.client.enableFirstPersonView": "Включить анимации от первого лица",
+  "text.autoconfig.bettercombat.option.client.enableFirstPersonView.@Tooltip": "Использовать анимации атаки от первого лица Better Combat при наличии совместимости",
   "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson": "Видимость рук в режиме от первого лица",
   "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson.@Tooltip": "Отображать руки во время анимации атаки в режиме \nот первого лица",
   "text.autoconfig.bettercombat.option.client.isShowingOtherHandFirstPerson": "Второстепенная рука в режиме от первого лица",

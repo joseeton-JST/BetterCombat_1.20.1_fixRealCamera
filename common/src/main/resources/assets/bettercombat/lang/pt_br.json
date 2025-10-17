@@ -19,6 +19,8 @@
     "text.autoconfig.bettercombat.option.client.isHighlightCrosshairEnabled.@Tooltip" : "Destaca a mira se os inimigos estiverem perto o suficiente para atacar.\nAVISO! Habilitar isso pode reduzir significativamente a taxa de quadros.",
     "text.autoconfig.bettercombat.option.client.hudHighlightColor" : "Cor de destaque",
     "text.autoconfig.bettercombat.option.client.hudHighlightColor.@Tooltip" : "Cor aplicada aos elementos do HUD, se necessário.",
+    "text.autoconfig.bettercombat.option.client.enableFirstPersonView": "Ativar animações em primeira pessoa",
+    "text.autoconfig.bettercombat.option.client.enableFirstPersonView.@Tooltip": "Usa as animações de ataque em primeira pessoa do Better Combat quando houver compatibilidade",
     "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson": "Mostrar os braços em primeira pessoa",
     "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson.@Tooltip": "Renderizar armas para animações de ataque reproduzidas na visão em primeira pessoa",
     "text.autoconfig.bettercombat.option.client.isShowingOtherHandFirstPerson": "Mostrar mão inativa em primeira pessoa",
