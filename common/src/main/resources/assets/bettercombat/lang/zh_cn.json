@@ -14,6 +14,8 @@
   "text.autoconfig.bettercombat.option.client.isHighlightCrosshairEnabled.@Tooltip" : "如果敌人足够近可以攻击，凸显示十字线。\n警告！ 启用此功能可能会显着降低帧速率。",
   "text.autoconfig.bettercombat.option.client.hudHighlightColor" : "凸显颜色",
   "text.autoconfig.bettercombat.option.client.hudHighlightColor.@Tooltip" : "应用于 HUD 元素的颜色（如果需要）",
+  "text.autoconfig.bettercombat.option.client.enableFirstPersonView": "启用第一人称动画",
+  "text.autoconfig.bettercombat.option.client.enableFirstPersonView.@Tooltip": "在兼容时使用 Better Combat 的第一人称攻击动画",
   "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson": "以第一人称视角显示手臂",
   "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson.@Tooltip": "为在第一人称视图中播放的攻击动画渲染手臂",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "平整动画过渡",

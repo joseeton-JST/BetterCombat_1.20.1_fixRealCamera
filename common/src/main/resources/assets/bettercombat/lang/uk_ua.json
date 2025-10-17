@@ -19,6 +19,8 @@
   "text.autoconfig.bettercombat.option.client.isHighlightCrosshairEnabled.@Tooltip" : "Підсвічує перехрестя, якщо вороги достатньо близько, щоб нанести удар.\nУВАГА! Увімкнення цього параметра може значно зменшити частоту кадрів.",
   "text.autoconfig.bettercombat.option.client.hudHighlightColor" : "Колір виділення",
   "text.autoconfig.bettercombat.option.client.hudHighlightColor.@Tooltip" : "За потреби, до елементів HUD застосовується колір.",
+  "text.autoconfig.bettercombat.option.client.enableFirstPersonView": "Увімкнути анімації від першої особи",
+  "text.autoconfig.bettercombat.option.client.enableFirstPersonView.@Tooltip": "Використовувати анімації атаки від першої особи Better Combat, якщо сумісно",
   "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson": "Показати руки від першої особи",
   "text.autoconfig.bettercombat.option.client.isShowingArmsInFirstPerson.@Tooltip": "Відобразити ваші руки для анімації атаки від першої особи",
   "text.autoconfig.bettercombat.option.client.isShowingOtherHandFirstPerson": "Показати неактивну руку від першої особи",
