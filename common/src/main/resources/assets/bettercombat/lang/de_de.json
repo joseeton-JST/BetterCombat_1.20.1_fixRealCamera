@@ -27,6 +27,8 @@
   "text.autoconfig.bettercombat.option.client.isAttackMovementLockEnabled.@Tooltip": "Reduziert, wie viel du dich während der Schlaganimation bewegen kannst. Aktivieren, um die Bedingung ohne Neustart anzuwenden.",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent": "Bewegungsgeschwindigkeit beim Angreifen (%)",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent.@Tooltip": "Legt fest, wie viel deiner normalen Geschwindigkeit beim Angreifen erhalten bleibt. 0 % lässt dich stillstehen, 100 % entspricht dem Basisverhalten.",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes": "Waffenattribute beim Angreifen verwenden",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes.@Tooltip": "Wenn aktiviert, liest Better Combat beim Anwenden der Sperre das Bewegungsgeschwindigkeitsattribut der aktuellen Waffe. Hat die Waffe kein Attribut, wird stattdessen der Schieberegler verwendet.",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "Animationsübergängen geglätten",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled.@Tooltip": "Angriffsanimationsübergänge werden auf Kosten der Animationstreue geglättet",
   "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeEnabled": "Gegenstands-Tooltip: Reichweite",

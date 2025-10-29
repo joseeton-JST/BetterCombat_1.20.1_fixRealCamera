@@ -22,6 +22,8 @@
   "text.autoconfig.bettercombat.option.client.isAttackMovementLockEnabled.@Tooltip": "在攻击动画播放时减少可移动距离。启用后无需重启即可应用该条件。",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent": "攻击时的移动速度 (%)",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent.@Tooltip": "选择攻击时保留的正常移动速度。0% 会完全停住，100% 等同于基础行为。",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes": "攻击时使用武器属性",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes.@Tooltip": "启用后，Better Combat 会在应用锁定时读取当前武器的移动速度属性。若武器没有该属性，则使用滑块数值。",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "平整动画过渡",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled.@Tooltip": "以牺牲动画保真度为代价来平滑攻击动画过渡",
   "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeEnabled": "项目工具提示: 攻击范围",

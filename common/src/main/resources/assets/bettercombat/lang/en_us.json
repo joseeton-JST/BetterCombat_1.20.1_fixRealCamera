@@ -29,6 +29,8 @@
   "text.autoconfig.bettercombat.option.client.isAttackMovementLockEnabled.@Tooltip": "Reduce how much you can move while a swing animation is playing. Toggle to apply the movement lock condition without restarting.",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent": "Movement speed while attacking (%)",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent.@Tooltip": "Choose how much of your normal speed remains when attacking. Set to 0% to stand still or 100% to match the base behavior.",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes": "Use weapon attributes while attacking",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes.@Tooltip": "When enabled, Better Combat reads the current weapon's movement speed attribute for attacks. If the weapon has no attribute, the slider value is used instead.",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "Smooth animation transitions",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled.@Tooltip": "Attack animations smoothly transition at the cost of accuracy",
   "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeEnabled": "Item tooltip: attack range",

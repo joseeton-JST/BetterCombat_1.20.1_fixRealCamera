@@ -22,6 +22,9 @@ public class WeaponAttributesHelper {
         var off_hand_pose = b.offHandPose() != null ? b.offHandPose() : a.offHandPose();
         var isTwoHanded = b.two_handed() != null ? b.two_handed() : a.two_handed();
         var category = b.category() != null ? b.category() : a.category();
+        var movementSpeedWhileAttacking = b.movementSpeedWhileAttackingRaw() != null
+                ? b.movementSpeedWhileAttackingRaw()
+                : a.movementSpeedWhileAttackingRaw();
         var attacks = a.attacks();
         if (b.attacks() != null && b.attacks().length > 0) {
             var overrideAttacks = new ArrayList<WeaponAttributes.Attack>();
@@ -43,7 +46,7 @@ public class WeaponAttributesHelper {
             }
             attacks = overrideAttacks.toArray(new WeaponAttributes.Attack[0]);
         }
-        return new WeaponAttributes(attackRange, pose, off_hand_pose, isTwoHanded, category, attacks);
+        return new WeaponAttributes(attackRange, pose, off_hand_pose, isTwoHanded, category, movementSpeedWhileAttacking, attacks);
     }
 
     public static void validate(WeaponAttributes attributes) throws Exception {

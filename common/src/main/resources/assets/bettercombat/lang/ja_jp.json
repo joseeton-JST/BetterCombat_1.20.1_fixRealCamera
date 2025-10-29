@@ -29,6 +29,8 @@
   "text.autoconfig.bettercombat.option.client.isAttackMovementLockEnabled.@Tooltip": "攻撃アニメーション中に移動できる量を減らします。ゲームを再起動せずに条件を適用するには有効にしてください。",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent": "攻撃中の移動速度 (%)",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent.@Tooltip": "攻撃中に通常の移動速度がどれだけ残るかを選択します。0%にするとその場に留まり、100%で従来の挙動になります。",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes": "攻撃時に武器属性を使用する",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes.@Tooltip": "有効にすると、Better Combat はロックを適用するときに現在の武器の移動速度属性を参照します。武器に属性がない場合はスライダーの値が使われます。",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "アニメーションのスムーズな移行",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled.@Tooltip": "攻撃アニメーションは正確さを犠牲にして滑らかに移行します。",
   "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeEnabled": "アイテムツールチップ: 攻撃範囲",

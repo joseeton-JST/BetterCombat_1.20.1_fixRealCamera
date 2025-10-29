@@ -29,6 +29,8 @@
   "text.autoconfig.bettercombat.option.client.isAttackMovementLockEnabled.@Tooltip": "Уменьшает возможность двигаться во время анимации удара. Включите, чтобы применить условие без перезапуска игры.",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent": "Скорость движения при атаке (%)",
   "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent.@Tooltip": "Выберите, какая часть обычной скорости сохраняется во время атаки. 0% — персонаж стоит на месте, 100% — базовое поведение.",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes": "Использовать атрибуты оружия при атаке",
+  "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes.@Tooltip": "Если включено, Better Combat при применении блокировки считывает атрибут скорости движения текущего оружия. Если у оружия нет атрибута, будет использовано значение ползунка.",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "Плавные анимации",
   "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled.@Tooltip": "Анимация атаки плавно переходит за счёт точности",
   "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeEnabled": "Дальность атаки (значение)",

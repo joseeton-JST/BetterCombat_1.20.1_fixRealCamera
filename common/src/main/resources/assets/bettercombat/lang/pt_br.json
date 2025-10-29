@@ -29,6 +29,8 @@
     "text.autoconfig.bettercombat.option.client.isAttackMovementLockEnabled.@Tooltip": "Reduz quanto você pode se mover enquanto a animação do golpe está tocando. Ative para aplicar a condição sem reiniciar o jogo.",
     "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent": "Velocidade de movimento ao atacar (%)",
     "text.autoconfig.bettercombat.option.client.attackMovementLockSpeedPercent.@Tooltip": "Escolha quanto da sua velocidade normal permanece ao atacar. Use 0% para ficar parado ou 100% para manter o comportamento padrão.",
+    "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes": "Usar atributos da arma ao atacar",
+    "text.autoconfig.bettercombat.option.client.attackMovementLockUsesAttributes.@Tooltip": "Quando ativado, o Better Combat lê o atributo de velocidade de movimento da arma atual ao aplicar o bloqueio. Se a arma não tiver atributo, o valor do controle deslizante será usado.",
     "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled": "Transições suaves de animação",
     "text.autoconfig.bettercombat.option.client.isSmoothAnimationTransitionEnabled.@Tooltip": "As animações de ataque transitam suavemente ao custo da precisão",
     "text.autoconfig.bettercombat.option.client.isTooltipAttackRangeEnabled": "Dica de ferramenta do item: alcance de ataque",

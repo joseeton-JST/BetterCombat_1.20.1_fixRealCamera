@@ -48,6 +48,13 @@ public final class WeaponAttributes {
     private final Boolean two_handed;
 
     /**
+     * Optional movement speed multiplier applied while attacking with this weapon.
+     * Values should remain within the inclusive range of [0, 1].
+     */
+    @Nullable
+    private final Double movement_speed_while_attacking;
+
+    /**
      * Specifies the category (aka family) type of the weapon.
      * This can be any value. Prefer using lowercase values.
      *
@@ -81,12 +88,14 @@ public final class WeaponAttributes {
             @Nullable String off_hand_pose,
             Boolean isTwoHanded,
             String category,
+            @Nullable Double movementSpeedWhileAttacking,
             Attack[] attacks) {
         this.attack_range = attack_range;
         this.pose = pose;
         this.off_hand_pose = off_hand_pose;
         this.two_handed = isTwoHanded;
         this.category = category;
+        this.movement_speed_while_attacking = movementSpeedWhileAttacking;
         this.attacks = attacks;
     }
 
@@ -422,6 +431,18 @@ public final class WeaponAttributes {
         return two_handed;
     }
 
+    @Nullable
+    public Double movementSpeedWhileAttackingRaw() {
+        return movement_speed_while_attacking;
+    }
+
+    public double movementSpeedWhileAttackingOrDefault(double fallback) {
+        if (movement_speed_while_attacking == null) {
+            return fallback;
+        }
+        return movement_speed_while_attacking;
+    }
+
     public Attack[] attacks() {
         return attacks;
     }
@@ -434,12 +455,13 @@ public final class WeaponAttributes {
         return Double.doubleToLongBits(this.attack_range) == Double.doubleToLongBits(that.attack_range) &&
                 Objects.equals(this.pose, that.pose) &&
                 Objects.equals(this.two_handed, that.two_handed) &&
+                Objects.equals(this.movement_speed_while_attacking, that.movement_speed_while_attacking) &&
                 Objects.equals(this.attacks, that.attacks);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(attack_range, two_handed, attacks);
+        return Objects.hash(attack_range, two_handed, movement_speed_while_attacking, attacks);
     }
 
     @Override
@@ -448,6 +470,7 @@ public final class WeaponAttributes {
                 "attack_range=" + attack_range + ", " +
                 "pose=" + pose + ", " +
                 "isTwoHanded=" + two_handed + ", " +
+                "movementSpeedWhileAttacking=" + movement_speed_while_attacking + ", " +
                 "attacks=" + attacks + ']';
     }
 

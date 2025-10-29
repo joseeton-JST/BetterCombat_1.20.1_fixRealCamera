@@ -3,6 +3,7 @@ package net.bettercombat.mixin.client;
 import net.bettercombat.BetterCombat;
 import net.bettercombat.api.MinecraftClient_BetterCombat;
 import net.bettercombat.client.BetterCombatClient;
+import net.bettercombat.logic.WeaponRegistry;
 import net.bettercombat.utils.MathHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -16,17 +17,29 @@ public class ClientPlayerEntityMixin {
     @Inject(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/input/Input;tick(ZF)V", shift = At.Shift.AFTER))
     private void tickMovement_ModifyInput(CallbackInfo ci) {
         var config = BetterCombat.config;
+        var clientPlayer = (ClientPlayerEntity)((Object)this);
         var multiplier = Math.min(Math.max(config.movement_speed_while_attacking, 0.0), 1.0);
         var clientConfig = BetterCombatClient.config;
         if (clientConfig != null && clientConfig.isAttackMovementLockEnabled) {
-            var clientMultiplier = Math.min(Math.max(clientConfig.attackMovementLockSpeedPercent / 100.0F, 0.0F), 1.0F);
+            float clientMultiplier = Float.NaN;
+            if (clientConfig.attackMovementLockUsesAttributes) {
+                var attributes = WeaponRegistry.getAttributes(clientPlayer.getMainHandStack());
+                if (attributes != null) {
+                    var rawValue = attributes.movementSpeedWhileAttackingRaw();
+                    if (rawValue != null) {
+                        clientMultiplier = (float) Math.min(Math.max(rawValue, 0.0D), 1.0D);
+                    }
+                }
+            }
+            if (Float.isNaN(clientMultiplier)) {
+                clientMultiplier = Math.min(Math.max(clientConfig.attackMovementLockSpeedPercent / 100.0F, 0.0F), 1.0F);
+            }
             multiplier = Math.min(multiplier, clientMultiplier);
         }
 //        System.out.println("Multiplier " + multiplier);
         if (multiplier == 1) {
             return;
         }
-        var clientPlayer = (ClientPlayerEntity)((Object)this);
         if (clientPlayer.hasVehicle() && !config.movement_speed_effected_while_mounting) {
             return;
         }
