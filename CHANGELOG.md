@@ -1,3 +1,10 @@
+# 1.8.7
+
+- Add client toggle to enable or disable first-person animations without restarting the game
+- Introduce configurable attack movement lock with optional weapon attribute overrides
+- Clamp attack slowdown values to sane defaults and refresh settings on save
+- Require Fabric Loader 0.16.10 to satisfy the bundled Fabric API dependency
+
 # 1.8.6
 
 - Fix fallback compat causing some crashes
