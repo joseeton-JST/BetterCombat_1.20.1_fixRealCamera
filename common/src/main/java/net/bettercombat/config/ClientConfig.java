@@ -1,3 +1,9 @@
+/*
+ * Better Combat Mod
+ * Copyright (C) 2024 The Better Combat Team
+ * License: GNU General Public License v3.0 or later
+ */
+
 package net.bettercombat.config;
 
 import me.shedaniel.autoconfig.ConfigData;
@@ -20,9 +26,16 @@ public class ClientConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public int hudHighlightColor = 0xFF0000;
     @ConfigEntry.Gui.Tooltip
+    public boolean enableFirstPersonView = false;
+    @ConfigEntry.Gui.Tooltip
     public boolean isShowingArmsInFirstPerson = false;
     @ConfigEntry.Gui.Tooltip
     public boolean isShowingOtherHandFirstPerson = true;
+    @ConfigEntry.Gui.Tooltip
+    public boolean isAttackMovementLockEnabled = false;
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
+    public int attackMovementLockSpeedPercent = 100;
     @ConfigEntry.Gui.Tooltip
     public boolean isSweepingParticleEnabled = true;
     @ConfigEntry.Gui.Tooltip

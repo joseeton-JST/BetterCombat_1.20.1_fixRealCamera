@@ -16,6 +16,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.ActionResult;
 
 @Environment(EnvType.CLIENT)
 public class BetterCombatClient implements ClientModInitializer {
@@ -24,8 +25,17 @@ public class BetterCombatClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         AutoConfig.register(ClientConfigWrapper.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new));
+        var holder = AutoConfig.getConfigHolder(ClientConfigWrapper.class);
         // Intuitive way to load a config :)
-        config = AutoConfig.getConfigHolder(ClientConfigWrapper.class).getConfig().client;
+        config = holder.getConfig().client;
+        holder.registerLoadListener((manager, data) -> {
+            config = data.client;
+            return ActionResult.SUCCESS;
+        });
+        holder.registerSaveListener((manager, data) -> {
+            config = data.client;
+            return ActionResult.SUCCESS;
+        });
 
         ClientNetwork.initializeHandlers();
         WeaponAttributeTooltip.initialize();

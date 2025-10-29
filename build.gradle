@@ -33,6 +33,23 @@ subprojects {
         minecraft "com.mojang:minecraft:${rootProject.architectury.minecraft}"
         mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     }
+
+    plugins.withId("org.cadixdev.licenser") {
+        license {
+            header project.resources.text.fromString("""
+Better Combat Mod
+Copyright (C) 2024 The Better Combat Team
+License: GNU General Public License v3.0 or later
+""")
+            include "**/*.java"
+            include "**/*.kt"
+            include "**/*.kts"
+            include "**/*.groovy"
+            exclude "**/net/fabricmc/**"
+            newLine = true
+            keywords "Better Combat", "License"
+        }
+    }
 }
 
 allprojects {

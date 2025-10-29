@@ -2,6 +2,7 @@ package net.bettercombat.mixin.client;
 
 import net.bettercombat.BetterCombat;
 import net.bettercombat.api.MinecraftClient_BetterCombat;
+import net.bettercombat.client.BetterCombatClient;
 import net.bettercombat.utils.MathHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -16,6 +17,11 @@ public class ClientPlayerEntityMixin {
     private void tickMovement_ModifyInput(CallbackInfo ci) {
         var config = BetterCombat.config;
         var multiplier = Math.min(Math.max(config.movement_speed_while_attacking, 0.0), 1.0);
+        var clientConfig = BetterCombatClient.config;
+        if (clientConfig != null && clientConfig.isAttackMovementLockEnabled) {
+            var clientMultiplier = Math.min(Math.max(clientConfig.attackMovementLockSpeedPercent / 100.0F, 0.0F), 1.0F);
+            multiplier = Math.min(multiplier, clientMultiplier);
+        }
 //        System.out.println("Multiplier " + multiplier);
         if (multiplier == 1) {
             return;
