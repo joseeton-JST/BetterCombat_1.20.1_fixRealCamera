@@ -28,11 +28,18 @@ public class BetterCombatClient implements ClientModInitializer {
         var holder = AutoConfig.getConfigHolder(ClientConfigWrapper.class);
         // Intuitive way to load a config :)
         config = holder.getConfig().client;
+        if (normalizeAttackMovementLock(config)) {
+            holder.save();
+        }
         holder.registerLoadListener((manager, data) -> {
             config = data.client;
+            if (normalizeAttackMovementLock(config)) {
+                manager.save();
+            }
             return ActionResult.SUCCESS;
         });
         holder.registerSaveListener((manager, data) -> {
+            normalizeAttackMovementLock(data.client);
             config = data.client;
             return ActionResult.SUCCESS;
         });
@@ -50,5 +57,27 @@ public class BetterCombatClient implements ClientModInitializer {
                 return 1.0F;
             });
         }
+    }
+
+    private static boolean normalizeAttackMovementLock(ClientConfig config) {
+        if (config == null) {
+            return false;
+        }
+        boolean changed = false;
+        if (config.attackMovementLockSpeedPercent < 0) {
+            config.attackMovementLockSpeedPercent = 0;
+            changed = true;
+        } else if (config.attackMovementLockSpeedPercent > 100) {
+            config.attackMovementLockSpeedPercent = 100;
+            changed = true;
+        }
+        if (!config.attackMovementLockSpeedPercentInitialized) {
+            if (config.attackMovementLockSpeedPercent == 100) {
+                config.attackMovementLockSpeedPercent = 0;
+            }
+            config.attackMovementLockSpeedPercentInitialized = true;
+            changed = true;
+        }
+        return changed;
     }
 }

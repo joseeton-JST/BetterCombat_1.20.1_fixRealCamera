@@ -35,7 +35,9 @@ public class ClientConfig implements ConfigData {
     public boolean isAttackMovementLockEnabled = false;
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 0, max = 100)
-    public int attackMovementLockSpeedPercent = 100;
+    public int attackMovementLockSpeedPercent = 0;
+    @ConfigEntry.Gui.Excluded
+    public boolean attackMovementLockSpeedPercentInitialized = false;
     @ConfigEntry.Gui.Tooltip
     public boolean isSweepingParticleEnabled = true;
     @ConfigEntry.Gui.Tooltip
